@@ -1,3 +1,4 @@
+/* importing the persian font into the css file */
 @font-face {
     font-family: 'vazir';
     src: url('../fonts/vazir.eot') format('eot');
@@ -5,7 +6,6 @@
         url('../fonts/vazir.woff') format('woff'),
         url('../fonts/vazir.woff') format('woff2');
 }
-
 
 * {
     padding: 0;
@@ -23,8 +23,7 @@ a {
     text-decoration: none;
 }
 
-ul,
-li {
+ul,li {
     list-style: none;
 }
 
@@ -32,9 +31,6 @@ li {
     width: 1200px;
     margin: auto;
 }
-
-
-
 
 header {
     width: 100%;
@@ -56,14 +52,17 @@ header nav ul li {
     margin-left: 40px;
 }
 
+header nav a{
+    transition: all .3s ease-in-out;
+}
+
 header nav ul li a img {
     width: 65px;
 }
 
-header nav ul li a:hover {
-    color: crimson;
+header nav  a:hover {
+    color: rgb(118, 214, 255);
 }
-
 
 header nav .auth {
     color: #fff;
@@ -125,7 +124,6 @@ header nav .auth {
     width: 30px;
 }
 
-
 .home-icon .abr {
     position: absolute;
     left: 15%;
@@ -133,7 +131,6 @@ header nav .auth {
     animation: abr 9s linear infinite;
     -webkit-animation: abr 9s linear infinite;
 }
-
 
 .home-icon .abr:nth-child(2) {
     position: absolute;
@@ -151,7 +148,6 @@ header nav .auth {
     -webkit-animation: abr 15s linear infinite;
 }
 
-
 .home-icon .abr:nth-child(4) {
     position: absolute;
     left: 53%;
@@ -159,7 +155,6 @@ header nav .auth {
     animation: abr 8s linear infinite;
     -webkit-animation: abr 8s linear infinite;
 }
-
 
 .home-icon .abr:nth-child(5) {
     position: absolute;
@@ -169,7 +164,6 @@ header nav .auth {
     -webkit-animation: abr 12s linear infinite;
 }
 
-
 .home-icon .abr:nth-child(6) {
     position: absolute;
     left: 80%;
@@ -178,8 +172,7 @@ header nav .auth {
     -webkit-animation: abr 9s linear infinite;
 }
 
-
-
+/* keyframes for animation of cloud */
 @keyframes abr {
 
     0%,
@@ -217,8 +210,6 @@ header nav .auth {
 
 }
 
-
-
 .service {
     padding: 120px 0;
     background: linear-gradient(-183deg, #fff 17%, #f3f3f3 0);
@@ -235,7 +226,7 @@ header nav .auth {
     position: absolute;
     width: 130px;
     height: 2px;
-    background: crimson;
+    background: rgb(118, 214, 255);
     bottom: -10px;
     right: 50%;
     transform: translateX(50%);
@@ -263,7 +254,6 @@ header nav .auth {
     text-align: center;
     box-shadow: 0 0 10px rgba(117, 117, 177, .2);
 }
-
 
 .service .service-item img {
     width: 80px;
@@ -294,7 +284,7 @@ header nav .auth {
     position: absolute;
     width: 130px;
     height: 2px;
-    background: crimson;
+    background: rgb(118, 214, 255);
     bottom: -10px;
     right: 50%;
     transform: translateX(50%);
@@ -358,8 +348,8 @@ footer .footer{
 }
 
 .social ul li a:hover {
-    color: crimson;
-    border: 1px solid crimson;
+    color: rgb(118, 214, 255);
+    border: 1px solid rgb(118, 214, 255);
 }
 
 .quick-access {
@@ -390,6 +380,111 @@ footer .footer{
 }
 
 .quick-access ul li a:hover {
-    color: crimson;
+    color: rgb(118, 214, 255);
 
+}
+
+.hamburger-menu{
+    display: none;
+}
+
+
+/* media queries for making webpage responsive */
+@media screen and (max-width: 1200px) {
+    .container{
+        width: 100%;
+    }
+    header{
+        display: flex;
+        padding: 0 50px;
+    }
+    .home .home-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .home .home-content .wrapper{
+        padding: 0 50px;
+    }
+    .home .home-content .wrapper .home-content-item{
+        width: calc(33.33% - 20px);
+    }
+    .service .service-wrapper{
+        flex-wrap: wrap;
+        padding: 0 50px;
+    }
+    .service .service-item{
+        width: calc(33.33% - 20px);
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .service .service-item{
+        width: calc(50% - 20px);
+    }
+    .hamburger-menu{
+        display: block;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    header nav{
+        height: 60px;
+    }
+    header nav ul{
+        position: absolute;
+        top: 60px;
+        background: #212121df;
+        left: 0;
+        right: 0;
+        opacity:0;
+        visibility: hidden;
+        text-align: center;
+        display: block;
+        padding: 20px 0;
+        border-top: 1px solid #161616;
+        transition: all .3s ease-in-out;
+    }
+    header nav ul li{
+        padding: 10px 0;
+    }
+    .active{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .home .home-content .wrapper .home-content-item{
+        width: calc(50% - 10px);
+    }
+    .service .service-title{
+        margin-bottom: 50px;
+    }
+    .service .service-item{
+        width: 100%;
+    }
+    footer .social{
+        width: 100%;
+    }
+    footer .quick-access{
+        width: 100%;
+        margin-top: 50px;
+    }
+    footer .logo{
+        width: 100%;
+        margin-top: 50px;
+    }
+    footer .footer{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .home .home-content .wrapper .home-content-item{
+        width: 100%;
+    }
+    .home .home-content .wrapper .home-content-item img{
+        width: 60px;
+    }
 }
