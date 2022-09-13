@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
     <title>بیمه بها</title>
 </head>
 <body>
+    <!-- the top part of web-page -->
     <div class="home">
         <!-- navbar -->
         <header>
@@ -28,6 +30,7 @@
                 </nav>
             </div>
         </header>
+
         <!-- Header -->
         <div class="home-content">
             <div class="home-content-title">
@@ -100,6 +103,7 @@
             </div>
         </div>
 
+        <!-- cloud for animation -->
         <div class="home-icon">
             <img src="images/bg.png" alt="">
 
@@ -124,6 +128,7 @@
         </div>
     </div>
 
+    <!-- service section -->
     <section class="service">
         <div class="service-title">
             <h2>خدمات ما</h2>
@@ -154,5 +159,99 @@
             </div>
         </div>
     </section>
+
+    <!-- Partners section -->
+    <section class="partners">
+        <div class="partners-title">
+            <h2>همکاران ما</h2>
+        </div>
+        <div class="container">
+            <div class="owl-carousel owl-theme">
+                <div class="partners-item">
+                    <img src="./images/Partners/1.png" alt="">
+                    <h4>بیمه معلم</h4>
+                </div>
+                <div class="partners-item">
+                    <img src="./images/Partners/10.png" alt="">
+                    <h4>بیمه البرز</h4>
+                </div>
+                <div class="partners-item">
+                    <img src="./images/Partners/11.png" alt="">
+                    <h4>بیمه ایران</h4>
+                </div>
+                <div class="partners-item">
+                    <img src="./images/Partners/12.png" alt="">
+                    <h4>بیمه پارسیان</h4>
+                </div>
+                <div class="partners-item">
+                    <img src="./images/Partners/13.png" alt="">
+                    <h4>بیمه پاسارگاد</h4>
+                </div>
+                <div class="partners-item">
+                    <img src="./images/Partners/14.png" alt="">
+                    <h4>بیمه دانا</h4>
+                </div>
+                <div class="partners-item">
+                    <img src="./images/Partners/15.png" alt="">
+                    <h4>بیمه دی</h4>
+                </div>
+                <div class="partners-item">
+                    <img src="./images/Partners/2.png" alt="">
+                    <h4>بیمه نوین</h4>
+                </div>
+                <div class="partners-item">
+                    <img src="./images/Partners/3.png" alt="">
+                    <h4>بیمه ملت</h4>
+                </div>
+                <div class="partners-item">
+                    <img src="./images/Partners/4.png" alt="">
+                    <h4>بیمه سرمد</h4>
+                </div>
+                <div class="partners-item">
+                    <img src="./images/Partners/6.png" alt="">
+                    <h4>بیمه سامان</h4>
+                </div>
+                <div class="partners-item">
+                    <img src="./images/Partners/7.png" alt="">
+                    <h4>بیمه رازی</h4>
+                </div>
+                <div class="partners-item">
+                    <img src="./images/Partners/8.png" alt="">
+                    <h4>بیمه آسماری</h4>
+                </div>
+                <div class="partners-item">
+                    <img src="./images/Partners/9.png" alt="">
+                    <h4>بیمه آسیا</h4>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function (){
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                rtl:true,
+                autoplay:true,
+                margin:10,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:6
+                    }
+                }
+            });
+        })
+    </script>
 </body>
 </html>

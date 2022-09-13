@@ -233,7 +233,7 @@ header nav .auth {
 .service .service-title::before {
     content: '';
     position: absolute;
-    width: 200px;
+    width: 130px;
     height: 2px;
     background: crimson;
     bottom: -10px;
@@ -277,3 +277,44 @@ header nav .auth {
     color: gray;
     line-height: 20px;
 }
+
+.partners {
+    padding: 70px 0;
+}
+
+.partners .partners-title {
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.partners .partners-title::before {
+    content: '';
+    position: absolute;
+    width: 130px;
+    height: 2px;
+    background: crimson;
+    bottom: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    -o-transform: translateX(50%);
+}
+
+.partners .partners-item{
+    text-align: center;
+    width: 100%;
+    padding: 0 35px;
+}
+
+.partners .partners-item img{
+    width: 100px;
+}
+
+.partners .partners-item h4{
+    padding-top: 20px;
+}
+
